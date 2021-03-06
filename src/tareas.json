@@ -1,7 +1,7 @@
 {
     "tareas": [
         {
-            "titulo": "bugfix mayuscula",
+            "titulo": "Hacer bugfix mayuscula",
             "responsable": "Mark",
             "descripcion": "lorem ipsum",
             "prioridad": "baja"
@@ -17,6 +17,12 @@
             "responsable": "Sara",
             "descripcion": "lorem ipsum",
             "prioridad": "media"
+        },
+        {
+            "titulo": "Traer Cafe",
+            "responsable": "Jimmy",
+            "descripcion": "Suministrar cafe para todo el equipo siempre que sea necesario",
+            "prioridad": "muy alta"
         }
     ]
 }
