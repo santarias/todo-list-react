@@ -3,6 +3,9 @@ function Navegacion(props) {
         <nav className="navbar navbar-dark bg-dark" >
             <a href="#" className="text-white">
                 {props.titulo}
+                <span className="badge badge-pill badge-light ml-2">
+                    {props.lista.length}
+                </span>
             </a>
         </nav>
     );

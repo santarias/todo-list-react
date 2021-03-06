@@ -14,7 +14,7 @@ class App extends Component {
     }
   }
   render() {
-    const tareas = this.state.tareas.map((tarea, i) => {
+    const printaTareas = this.state.tareas.map((tarea, i) => {
       return (
         <div className="col-md-4">
           <div className="card mt-4">
@@ -34,10 +34,10 @@ class App extends Component {
     });
     return (
       <div className="App" >
-        <Navigation titulo="Tareas" />
+        <Navigation titulo="Tareas" lista={tareas} />
         <div className="container">
           <div className="row mt-4">
-            {tareas}
+            {printaTareas}
           </div>
         </div>
         <img src={logo} className="App-logo" alt="logo" />
