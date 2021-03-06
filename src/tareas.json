@@ -1,0 +1,28 @@
+{
+    "tareas": [
+        {
+            "titulo": "Hacer diseño de pagina",
+            "responsable": "Mario",
+            "descripcion": "Se encargara de hacer el diseño mas importante",
+            "prioridad": "demasiado alta"
+        },
+        {
+            "titulo": "Mock up navegacion",
+            "responsable": "Marta",
+            "descripcion": "lorem ipsum",
+            "prioridad": "alta"
+        },
+        {
+            "titulo": "Preparar conferencia",
+            "responsable": "Sara",
+            "descripcion": "lorem ipsum",
+            "prioridad": "media"
+        },
+        {
+            "titulo": "Traer Cafe",
+            "responsable": "Jimmy",
+            "descripcion": "Suministrar cafe para todo el equipo siempre que sea necesario",
+            "prioridad": "muy alta"
+        }
+    ]
+}

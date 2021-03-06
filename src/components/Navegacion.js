@@ -1,8 +1,11 @@
 function Navegacion(props) {
     return (
         <nav className="navbar navbar-dark bg-dark" >
-            <a href="" className="text-white">
+            <a href="#" className="text-white">
                 {props.titulo}
+                <span className="badge badge-pill badge-light ml-2">
+                    {props.lista.length}
+                </span>
             </a>
         </nav>
     );
