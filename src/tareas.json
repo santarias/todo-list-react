@@ -1,14 +1,14 @@
 {
     "tareas": [
         {
-            "titulo": "Hacer bugfix mayuscula",
-            "responsable": "Mark",
-            "descripcion": "lorem ipsum",
-            "prioridad": "baja"
+            "titulo": "Hacer diseño de pagina",
+            "responsable": "Mario",
+            "descripcion": "Se encargara de hacer el diseño mas importante",
+            "prioridad": "demasiado alta"
         },
         {
             "titulo": "Mock up navegacion",
-            "responsable": "Mark",
+            "responsable": "Marta",
             "descripcion": "lorem ipsum",
             "prioridad": "alta"
         },
