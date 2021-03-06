@@ -26,7 +26,9 @@ class App extends Component {
             </div>
             <div className="card-body">
               <p>{tarea.descripcion}</p>
-              <p className="h4">{tarea.responsable}</p>
+              <span className="tarea-responsable h5">
+                {tarea.responsable}
+              </span>
             </div>
           </div>
         </div>

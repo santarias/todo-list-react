@@ -31,3 +31,11 @@ nav {
 .prioridad-tarea::first-letter{
   text-transform: capitalize;
 }
+
+.tarea-responsable{
+  border-radius: 27%; 
+  padding: 2px;  
+  background:#7185c9;  
+  color: #fff;
+  border: 2px #cc41bc solid;
+}
