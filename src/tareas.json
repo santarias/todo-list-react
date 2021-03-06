@@ -1,0 +1,22 @@
+{
+    "tareas": [
+        {
+            "titulo": "bugfix mayuscula",
+            "responsable": "Mark",
+            "descripcion": "lorem ipsum",
+            "prioridad": "baja"
+        },
+        {
+            "titulo": "Mock up navegacion",
+            "responsable": "Mark",
+            "descripcion": "lorem ipsum",
+            "prioridad": "alta"
+        },
+        {
+            "titulo": "Preparar conferencia",
+            "responsable": "Sara",
+            "descripcion": "lorem ipsum",
+            "prioridad": "media"
+        }
+    ]
+}
