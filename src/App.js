@@ -13,11 +13,19 @@ class App extends Component {
     this.state = {
       tareas
     }
+    this.handleAddTodo = this.handleAddTodo.bind(this);
   }
+
+  handleAddTodo(tarea){
+    this.setState({
+      tareas: [...this.state.tareas, tarea]
+    });
+  }
+
   render() {
     const printaTareas = this.state.tareas.map((tarea, i) => {
       return (
-        <div className="col-3">
+        <div className="col-3 tarjeta-tarea">
           <div className="card mt-4 tarjeta-tarea">
             <div className="card-header">
               <h3>{tarea.titulo}</h3>
@@ -37,15 +45,15 @@ class App extends Component {
       )
     });
     return (
-      <div className="App" >
+      <div className="App mb-4" >
         <Navigation titulo="Tareas" lista={tareas} />
-        <div className="container">
+        <div className="container contenedor-tarea">
+            <TodoForm onAddTodo={this.handleAddTodo}/>
           <div className="row mt-4">
-            <TodoForm/>
             {printaTareas}
+        <img src={logo} className="App-logo" alt="logo" />
           </div>
         </div>
-        <img src={logo} className="App-logo" alt="logo" />
       </div>
     );
   }
