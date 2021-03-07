@@ -52,9 +52,9 @@ class TodoForm extends Component {
           Descripcion
           <textarea
             name="descripcion"
-            cols="auto"
+            cols="25"
             rows="auto"
-            className="form-group"
+            className="form-control"
             placeholder="Descripcion de tarea"
             onChange={this.handleInput} ></textarea>
         </div>
