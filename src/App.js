@@ -10,8 +10,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      tareas
-    }
+      tareas,
+    }    
+    this.algo = tareas.length;    
     this.handleAddTodo = this.handleAddTodo.bind(this);
   }
 
@@ -21,17 +22,26 @@ class App extends Component {
     cerrarForm.classList.add("ocultar-elemento");  
     form.classList.add("ocultar-elemento");
     this.setState({
-      tareas: [...this.state.tareas, tarea]
-    });
+      tareas: [...this.state.tareas, tarea]      
+    }); 
+  }
+
+  removeTodo(index){
+    if (window.confirm("Estas seguro de eliminar la tarea?")){
+      this.setState({
+        tareas: this.state.tareas.filter((tarea, i) => {
+          return i !== index
+        })
+      })
+    }    
   }
 
 
-
   render() {
-    const printaTareas = this.state.tareas.map((tarea, i) => {
+    const printaTareas = this.state.tareas.map((tarea, index) => {
       return (
-        <div className="col-3 tarjeta-tarea">
-          <div className="card mt-4 tarjeta-tarea">
+        <div className="col-3 tarjeta-tarea" key={index}>
+          <div className="card  mt-4 tarjeta-tarea">
             <div className="card-header">
               <h3>{tarea.titulo}</h3>
               <span className="badge badge-pill badge-danger ml-2 
@@ -45,13 +55,19 @@ class App extends Component {
                 {tarea.responsable}
               </span>
             </div>
+            <div className="card-footer">
+              <button className="btn btn-danger"
+              onClick={this.removeTodo.bind(this, index)}>
+              Eliminar
+              </button>
+            </div>
           </div>
         </div>
       )
     });
     return (
       <div className="App mb-4" >
-        <Navigation titulo="Tareas" lista={this.state.tareas} />
+        <Navigation titulo="Tareas" lista={this.algo} />
         <div className="container contenedor-tarea">
           <div className="card bg-dark tarjeta-tarea form-tarea ocultar-elemento">
             <TodoForm onAddTodo={this.handleAddTodo}/>

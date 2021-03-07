@@ -36,6 +36,7 @@
 
 .tarjeta-tarea{  
   max-width: 15rem;
+  flex-wrap: wrap 1;
 }
 
 .contenedor-tarea{
