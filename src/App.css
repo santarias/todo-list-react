@@ -29,7 +29,7 @@ nav {
 }
 
 .prioridad-tarea::first-letter{
-  text-transform: capitalize;
+  text-transform: capitalize;  
 }
 
 .tarea-responsable{
@@ -38,4 +38,8 @@ nav {
   background:#7185c9;  
   color: #fff;
   border: 2px #cc41bc solid;
+}
+
+.tarjeta-tarea{
+  max-width: 15rem;
 }

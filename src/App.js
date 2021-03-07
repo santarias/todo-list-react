@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navigation from './components/Navegacion';
+import TodoForm from "./components/TodoForm";
 
 import { tareas } from './tareas.json';
 
@@ -16,11 +17,12 @@ class App extends Component {
   render() {
     const printaTareas = this.state.tareas.map((tarea, i) => {
       return (
-        <div className="col-md-4">
-          <div className="card mt-4">
+        <div className="col-3">
+          <div className="card mt-4 tarjeta-tarea">
             <div className="card-header">
               <h3>{tarea.titulo}</h3>
-              <span className="badge badge-pill badge-danger ml-2 prioridad-tarea">
+              <span className="badge badge-pill badge-danger ml-2 
+                prioridad-tarea">
                 {tarea.prioridad}
               </span>
             </div>
@@ -39,6 +41,7 @@ class App extends Component {
         <Navigation titulo="Tareas" lista={tareas} />
         <div className="container">
           <div className="row mt-4">
+            <TodoForm/>
             {printaTareas}
           </div>
         </div>
