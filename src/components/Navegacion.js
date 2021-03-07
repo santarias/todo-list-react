@@ -9,8 +9,19 @@ class Navegacion extends Component {
     this.lista = props.lista;
   }
 
-  handleClick() {
-    alert("algo");
+  showForm(e) {
+    e.preventDefault();
+    const form = document.querySelector(".form-tarea");
+    form.classList.remove("ocultar-elemento");
+    const cerrarForm = document.querySelector(".enlace-formulario");
+    cerrarForm.classList.remove("ocultar-elemento");
+  }
+
+  hideForm() {
+    const form = document.querySelector(".form-tarea");
+    form.classList.add("ocultar-elemento");
+    const cerrarForm = document.querySelector(".enlace-formulario");
+    cerrarForm.classList.add("ocultar-elemento");
   }
 
   render() {
@@ -22,6 +33,16 @@ class Navegacion extends Component {
             {this.lista.length}
           </span>
         </a>
+        <button type="button" className="
+          btn btn-danger
+          text-white 
+          enlace-formulario 
+          ocultar-elemento" onClick={this.hideForm}>
+          Cerrar formulario
+        </button>
+        <button type="button" className="btn btn-info" onClick={this.showForm}>
+          Agregar Tarea
+        </button>
       </nav>
     );
   }

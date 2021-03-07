@@ -17,10 +17,16 @@ class App extends Component {
   }
 
   handleAddTodo(tarea){
+    const form = document.querySelector(".form-tarea");  
+    const cerrarForm = document.querySelector(".enlace-formulario");
+    cerrarForm.classList.add("ocultar-elemento");  
+    form.classList.add("ocultar-elemento");
     this.setState({
       tareas: [...this.state.tareas, tarea]
     });
   }
+
+
 
   render() {
     const printaTareas = this.state.tareas.map((tarea, i) => {
@@ -46,9 +52,11 @@ class App extends Component {
     });
     return (
       <div className="App mb-4" >
-        <Navigation titulo="Tareas" lista={tareas} />
+        <Navigation titulo="Tareas" lista={this.state.tareas} />
         <div className="container contenedor-tarea">
+          <div className="card bg-dark tarjeta-tarea form-tarea ocultar-elemento">
             <TodoForm onAddTodo={this.handleAddTodo}/>
+          </div>
           <div className="row mt-4">
             {printaTareas}
         <img src={logo} className="App-logo" alt="logo" />
