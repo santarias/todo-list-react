@@ -9,6 +9,8 @@ class Navegacion extends Component {
     this.lista = props.lista;
   }
 
+  
+
   showForm(e) {
     e.preventDefault();
     const form = document.querySelector(".form-tarea");
@@ -30,7 +32,7 @@ class Navegacion extends Component {
         <a href="#" className="text-white">
           {this.titulo}
           <span className="badge badge-pill badge-light ml-2">
-            {this.lista.length}
+            {this.lista}
           </span>
         </a>
         <button type="button" className="
